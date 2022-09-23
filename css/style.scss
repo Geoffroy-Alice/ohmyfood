@@ -1,7 +1,12 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
 @import "./parts/footer";
 @import "./parts/header";
+
 body{
     margin: 0;
+    font-family: roboto, verdana, sans-serif;
 }
 .localisation{
     display: flex;
@@ -15,43 +20,96 @@ body{
 }
 .reservation{
     text-align: center;
-    padding: 50px 30px;
+    padding: 25px 20px 50px 20px;
     background-color: #F5F5F5;
-    h1{
+    &__titre{
         margin: 0;
+        font-size: 17px;
+        padding: 0 20px;
+    }
+    &__soustitre p{
+        margin-bottom: 30px;
+        color: gray;
+        font-size: 19px;
     }
     button{
         padding: 0px 15px;
         border-radius: 25px;
+        cursor: pointer;
+        background: linear-gradient(to top, #9356DC, #FF79DA);
+        color: white;
+        border: inherit;
+        box-shadow: 5px 5px 10px #d1d1d1;
+        p{
+            font-size: 15px;
+        }
     }
+}
+h2{
+    margin: 0;
+    padding: 30px 0 25px 0;
+    font-size: 24px;
+    font-weight: bold;
 }
 .fonction{
     margin: 0;
-    padding: 40px 0 20px 15px;
-    .__btn{
-    display: flex;
-    flex-direction: column;
-    padding: 0 15px 40px 20px;
+    padding: 50px 0 25px 15px;
+    font-size: 24px;
+    &__btn{
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px 50px 20px;
     }
-        .__btn1{
-            display: flex;
-            align-items: baseline;
-            background-color: white;
-            margin-bottom: 15px;
-            border-radius: 20px;
-            padding: 10px 0;
+    &__btn1{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        padding: 10px 0;
+        background-color: #F5F5F5;
+        border: inherit;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px #d9d9d9;
+        &:hover{
+            background-color: #9356DC;
+            .fonction__icone{
+                color: white;
+            }
+        }
+    }
+    &__nombre{
+        background-color: #9356DC;
+        border: 1px solid #9356DC;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        color: white;
+        margin-left: -13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+    &__icone{
+        color: #7E7E7E;
+        margin-right: 25px;
+        font-size: 20px;
+    }
+    &__texte{
+        font-size: 17px;  
+    }
 }
-}
+    .i{
+        display: flex;
+        justify-content: center;
+    }
 .restaurant{
         background-color: #F5F5F5;
-        padding: 0 15px 40px 15px;
-    h2{
-        margin: 0;
-        padding: 30px 0 15px 0;
-    }
+        padding: 20px 15px 40px 15px;
     a{
         text-decoration: none;
         color: black;
+        position: relative;
     }
     .card{
         border-radius: 15px;
@@ -61,25 +119,64 @@ body{
     .card__image img{
         width: 100%;
         border-radius: 15px 15px 0 0;
-        height: 150px;
+        height: 170px;
         object-fit: cover;
     }
+    .card__nouveau{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: 1px solid #99E2D0;
+        background-color: #99E2D0;
+        padding: 5px 10px;
+        font-size: 15px;
+    }
     .card__body{
-        padding-left: 10px;
-        padding-top: 10px;
+        padding-left: 15px;
+        padding-top: 15px;
+        box-shadow: 0px 10px 10px -10px #D9D9D9;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 17px;
     }
     h3{
         margin: 0;
         padding-bottom: 5px;
+        font-size: 17px;
     }
     .card__lieu{
         p{
         margin: 0;
+        color: gray;
         }
     }
     .card__icone{
         display: flex;
         justify-content: flex-end;
         margin-right: 30px;
+        font-size: 25px;
+        color: gray;
+        position: relative;
+        .fa-heart{
+            position: absolute;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .fa-regular{
+            opacity: 1;
+        }
+        .fa-solid{
+            opacity: 0;
+            background: linear-gradient(to top, #9356DC, #FF79DA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &:hover{
+            .fa-regular{
+                opacity: 0;
+            }
+            .fa-solid{
+                opacity: 1;
+            }
+        }
     }
 }

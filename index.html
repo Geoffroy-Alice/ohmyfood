@@ -6,13 +6,20 @@
         <title>OHMYFOOD-Accueil</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" media="screen and (min-width: 650px)" href="css/grande_resolution.css">
     </head>
     <body>
         <div class="loader">
-
+            <div class="loader__rond">
+                <div class="animation">
+                    <div class="animation__1tier"></div>
+                    <div class="animation__2tier"></div>
+                    <div class="animation__3tier"></div>
+                </div>
+            </div>
         </div>
         <header class="header">
             <img class="header__logo" src="./Maquettes Ohmyfood/images/logo/ohmyfood@2x.svg" alt="ohmyfood">
@@ -24,38 +31,46 @@
                 <div class="reservation__titre"><h1>Réservez le menu qui vous convient</h1></div>
                 <div class="reservation__soustitre"><p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p></div>
                 <button class="reservation__btn">
+                    <a href="#">
                     <p>Explorer nos restaurants</p>
+                    </a>
                 </button>
             </section>
             <section>
                 <h2 class="fonction">Fonctionnement</h2>
                 <div class="fonction__btn">
                     <button class="fonction__btn1">
+                        <a href="#">
                         <div class="fonction__nombre">
-                            1
+                            <i class="icon-1 fa-solid fa-1"></i>
                         </div>
                         <div class="fonction__icone">
                         <i class="fa-solid fa-mobile-screen-button"></i>
-                        </div>
                         <p class="fonction__texte">Choisissez un restaurant</p>
+                        </div>
+                        </a>
                     </button>
-                    <button class="fonction__btn1">
+                    <button class="fonction__btn1" >
+                        <a href="#">
                         <div class="fonction__nombre">
                             <i class="icon-2 fa-solid fa-2"></i>
                         </div>
                         <div class="fonction__icone">
                             <i class="fa-sharp fa-solid fa-list-ul"></i>
-                        </div>
                         <p class="fonction__texte">Composez votre menu</p>
+                        </div>
+                        </a>
                     </button>
                     <button class="fonction__btn1">
+                        <a href="#">
                         <div class="fonction__nombre">
                             <i class="icon-3 fa-solid fa-3"></i>
                         </div>
                         <div class="fonction__icone">
                             <i class="fa-sharp fa-solid fa-store"></i>
-                        </div>
                         <p class="fonction__texte">Dégustez au restaurant</p>
+                        </div>
+                        </a>
                     </button>
                 </div>
             </section>
@@ -88,6 +103,7 @@
                             </div>
                             <div class="card__icone">
                                 <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                             </div>
                         </a>
@@ -102,6 +118,7 @@
                             </div>
                             <div class="card__icone">
                                 <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                             </div>
                         </a>
@@ -116,6 +133,7 @@
                             </div>
                             <div class="card__icone">
                                 <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                             </div>
                         </a>

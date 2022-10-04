@@ -98,6 +98,14 @@ h2{
         display: flex;
         flex-direction: column;
         padding: 0 15px 50px 20px;
+        @media screen and (min-width: 551px) and (max-width: 900px){
+              justify-content: space-around;
+              align-items: center;
+        }
+        @media screen and (min-width: 901px){
+            flex-direction: row;
+            justify-content: space-around;
+        }
     }
     &__btn1{
         margin-bottom: 20px;
@@ -115,6 +123,12 @@ h2{
             .fonction__icone{
                 color: $color-primary;
             }
+        }
+        @media screen and (min-width: 551px) and (max-width: 900px){
+            width: 60%;
+        }
+        @media screen and (min-width: 901px){
+            width: 30%;
         }
         a{
             width: 100%;
@@ -154,16 +168,36 @@ h2{
         padding: 20px 15px 40px 15px;
         display: flex;
         flex-direction: column;
+        @media screen and (min-width: 551px) and (max-width: 900px){
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media screen and (min-width: 901px){
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     a{
         text-decoration: none;
         color: black;
         position: relative;
+        flex-direction: column;
+        line-height: 1;
     }
-    .card{
+    .card__accueil{
         border-radius: 15px;
         background-color: white;
         margin-bottom: 20px;
         transition: all .4s ease-in-out;
+        @media screen and (min-width: 901px){
+            width: 45%;
+            margin: 15px;
+        }
+        @media screen and (min-width: 551px) and (max-width: 900px){
+            width: 40%;
+            margin: 15px;
+        }
         &:hover{
             transform: scale(1.03);
             box-shadow: 5px 5px 10px #C9C9C9;
@@ -188,7 +222,7 @@ h2{
         color: #288C74;
     }
     .card__body{
-        padding-left: 15px;
+        padding-left: 10px;
         padding-top: 15px;
         box-shadow: 0px 10px 10px -10px #D9D9D9;
         display: flex;
@@ -213,6 +247,9 @@ h2{
         font-size: 25px;
         color: gray;
         position: relative;
+        @media screen and (min-width: 551px) and (max-width: 900px){
+            margin-right: 20px;
+        }
         .fa-heart{
             position: absolute;
             transition: opacity 0.5s ease-in-out;

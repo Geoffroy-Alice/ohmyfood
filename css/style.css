@@ -29,12 +29,18 @@ footer .fa-handshake-angle {
   font-size: 11px;
 }
 
+@media screen and (min-width: 901px) {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 25px;
+  }
+}
 .header__logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding: 15px 0;
-  width: 42%;
 }
 
 .header__menu {
@@ -56,6 +62,16 @@ footer .fa-handshake-angle {
   margin-right: auto;
 }
 
+@media screen and (min-width: 551px) and (max-width: 900px) {
+  .header__menu img {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 901px) {
+  .header__menu img {
+    width: 30%;
+  }
+}
 footer {
   background-color: #2C2C2C;
   color: white;
@@ -87,6 +103,13 @@ footer .fa-handshake-angle {
   font-size: 11px;
 }
 
+@media screen and (min-width: 901px) {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 25px;
+  }
+}
 body {
   margin: 0;
   font-family: roboto, verdana, sans-serif;
@@ -98,6 +121,24 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 551px) and (max-width: 900px) {
+  .image__menu {
+    height: 320px;
+  }
+}
+@media screen and (min-width: 901px) {
+  .image__menu {
+    display: flex;
+    z-index: 1;
+    width: 35%;
+    height: 210px;
+    border: 4px solid #99E2D0;
+    border-radius: 15px;
+    top: 20px;
+    left: 100px;
+    position: relative;
+  }
+}
 
 h1 {
   margin-top: 0;
@@ -105,6 +146,11 @@ h1 {
   margin-bottom: 5px;
   font-family: shrikhand, Verdana, sans-serif;
   padding-left: 20px;
+}
+@media screen and (min-width: 901px) {
+  h1 {
+    padding-right: 65px;
+  }
 }
 
 .menu {
@@ -115,11 +161,28 @@ h1 {
   margin-top: -55px;
   padding-bottom: 80px;
 }
+@media screen and (min-width: 551px) and (max-width: 900px) {
+  .menu {
+    margin-top: -40px;
+  }
+}
+@media screen and (min-width: 901px) {
+  .menu {
+    margin-top: -220px;
+    border-radius: 0;
+  }
+}
 .menu__titre {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   padding: 30px 60px 0px 0px;
+}
+@media screen and (min-width: 901px) {
+  .menu__titre {
+    justify-content: center;
+    padding: 100px 130px 100px 430px;
+  }
 }
 .menu__icone__menu {
   font-size: 25px;
@@ -147,6 +210,50 @@ h1 {
 .menu__icone__menu:hover .fa-solid {
   opacity: 1;
 }
+@media screen and (min-width: 901px) {
+  .menu__complet {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.menu__entrees {
+  -webkit-animation: 4s cubic-bezier(0.6, 0.34, 0.42, 0.67) 2.6 1 slideInFromLeft;
+          animation: 4s cubic-bezier(0.6, 0.34, 0.42, 0.67) 2.6 1 slideInFromLeft;
+}
+@-webkit-keyframes animation-menu {
+  to {
+    transform: translateX(0);
+  }
+  from {
+    transform: translateX(1);
+  }
+}
+@keyframes animation-menu {
+  to {
+    transform: translateX(0);
+  }
+  from {
+    transform: translateX(1);
+  }
+}
+@media screen and (min-width: 901px) {
+  .menu__entrees {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .menu__plats {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .menu__desserts {
+    width: 33%;
+  }
+}
 
 .menu__card__titre {
   font-size: 16px;
@@ -168,22 +275,43 @@ h1 {
 }
 
 .card {
-  background-color: white;
-  border-radius: 15px;
-  padding: 3px 10px;
-  line-height: 0.5;
   margin-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
   margin-left: 15px;
   margin-right: 15px;
-  box-shadow: 0px 10px 10px -10px #D9D9D9;
 }
-.card h3 {
+.card a {
+  background-color: white;
+  border-radius: 15px;
+  line-height: 0.5;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 10px 10px -10px #d9d9d9;
+  text-decoration: none;
+  width: 100%;
+  margin: 0;
+}
+@media screen and (min-width: 901px) {
+  .card a {
+    width: 100%;
+  }
+}
+.card a:hover .menu__icone__liste {
+  width: 80px;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+.card a:hover .menu__icone__liste .fa-solid, .card a:hover .menu__icone__liste .fas {
+  color: white;
+}
+.card a:hover .fa-solid, .card a:hover .fas {
+  transform: rotate(360deg);
+  transition: all 0.8s ease-in-out;
+  color: white;
+}
+.card .nom {
   font-size: 18px;
-}
-.card h3 p {
-  font-size: 15px;
+  padding-left: 10px;
+  color: black;
 }
 .card .entrees__description {
   white-space: nowrap;
@@ -191,11 +319,21 @@ h1 {
   text-overflow: ellipsis;
   width: 85%;
 }
+.card .entrees__description .supplement {
+  font-size: 15px;
+  padding-left: 10px;
+  color: gray;
+}
 .card .plats__description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 85%;
+}
+.card .plats__description .supplement {
+  font-size: 15px;
+  padding-left: 10px;
+  color: gray;
 }
 .card .desserts__description {
   white-space: nowrap;
@@ -203,28 +341,30 @@ h1 {
   text-overflow: ellipsis;
   width: 85%;
 }
+.card .desserts__description .supplement {
+  font-size: 15px;
+  padding-left: 10px;
+  color: gray;
+}
 .card .survol {
   display: flex;
 }
 .card .prix__description {
   align-items: end;
   display: flex;
-  padding-bottom: 15px;
-  padding-right: 20px;
+  margin: 15px;
   font-size: 15px;
+  color: black;
 }
 .card .menu__icone__liste {
   align-items: center;
   justify-content: center;
   display: flex;
-  width: 60px;
-  height: 100%;
+  width: 0px;
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: -70px;
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
-  transition: margin-right 1s ease 0s;
 }
 .card .strong {
   align-items: end;
@@ -232,8 +372,9 @@ h1 {
   padding-bottom: 15px;
 }
 .card .fa-solid, .card .fas {
-  color: white;
+  margin: 0;
   font-size: 25px;
+  color: transparent;
 }
 
 .btn__menu {
@@ -364,6 +505,18 @@ body .fonction__btn {
   flex-direction: column;
   padding: 0 15px 50px 20px;
 }
+@media screen and (min-width: 551px) and (max-width: 900px) {
+  body .fonction__btn {
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 901px) {
+  body .fonction__btn {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 body .fonction__btn1 {
   margin-bottom: 20px;
   border-radius: 20px;
@@ -381,6 +534,16 @@ body .fonction__btn1:hover {
 }
 body .fonction__btn1:hover .fonction__icone {
   color: #9356DC;
+}
+@media screen and (min-width: 551px) and (max-width: 900px) {
+  body .fonction__btn1 {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 901px) {
+  body .fonction__btn1 {
+    width: 30%;
+  }
 }
 body .fonction__btn1 a {
   width: 100%;
@@ -419,18 +582,46 @@ body .restaurant {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 551px) and (max-width: 900px) {
+  body .restaurant {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 901px) {
+  body .restaurant {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 body .restaurant a {
   text-decoration: none;
   color: black;
   position: relative;
+  flex-direction: column;
+  line-height: 1;
 }
-body .restaurant .card {
+body .restaurant .card__accueil {
   border-radius: 15px;
   background-color: white;
   margin-bottom: 20px;
   transition: all 0.4s ease-in-out;
 }
-body .restaurant .card:hover {
+@media screen and (min-width: 901px) {
+  body .restaurant .card__accueil {
+    width: 45%;
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 900px) {
+  body .restaurant .card__accueil {
+    width: 40%;
+    margin: 15px;
+  }
+}
+body .restaurant .card__accueil:hover {
   transform: scale(1.03);
   box-shadow: 5px 5px 10px #C9C9C9;
 }
@@ -454,7 +645,7 @@ body .restaurant .card__nouveau {
   color: #288C74;
 }
 body .restaurant .card__body {
-  padding-left: 15px;
+  padding-left: 10px;
   padding-top: 15px;
   box-shadow: 0px 10px 10px -10px #D9D9D9;
   display: flex;
@@ -477,6 +668,11 @@ body .restaurant .card__icone {
   font-size: 25px;
   color: gray;
   position: relative;
+}
+@media screen and (min-width: 551px) and (max-width: 900px) {
+  body .restaurant .card__icone {
+    margin-right: 20px;
+  }
 }
 body .restaurant .card__icone .fa-heart {
   position: absolute;

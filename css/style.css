@@ -217,26 +217,6 @@ h1 {
   }
 }
 
-.menu__entrees {
-  -webkit-animation: 4s cubic-bezier(0.6, 0.34, 0.42, 0.67) 2.6 1 slideInFromLeft;
-          animation: 4s cubic-bezier(0.6, 0.34, 0.42, 0.67) 2.6 1 slideInFromLeft;
-}
-@-webkit-keyframes animation-menu {
-  to {
-    transform: translateX(0);
-  }
-  from {
-    transform: translateX(1);
-  }
-}
-@keyframes animation-menu {
-  to {
-    transform: translateX(0);
-  }
-  from {
-    transform: translateX(1);
-  }
-}
 @media screen and (min-width: 901px) {
   .menu__entrees {
     width: 33%;
@@ -274,6 +254,99 @@ h1 {
   margin-top: 5px;
 }
 
+.card__entrees {
+  -webkit-animation: animation-entrees 3s ease-in-out;
+          animation: animation-entrees 3s ease-in-out;
+}
+@-webkit-keyframes animation-entrees {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes animation-entrees {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.card__plats {
+  -webkit-animation: animation-plats 4s ease-in-out;
+          animation: animation-plats 4s ease-in-out;
+}
+@-webkit-keyframes animation-plats {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes animation-plats {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.card__desserts {
+  -webkit-animation: animation-desserts 5s ease-in-out;
+          animation: animation-desserts 5s ease-in-out;
+}
+@-webkit-keyframes animation-desserts {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes animation-desserts {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 .card {
   margin-bottom: 15px;
   margin-left: 15px;
@@ -305,7 +378,7 @@ h1 {
 }
 .card a:hover .fa-solid, .card a:hover .fas {
   transform: rotate(360deg);
-  transition: all 0.8s ease-in-out;
+  transition: all 1s ease-in-out;
   color: white;
 }
 .card .nom {
@@ -380,7 +453,7 @@ h1 {
 .btn__menu {
   margin-top: 50px;
   border-radius: 25px;
-  padding: 0px 50px;
+  padding: 15px 50px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -388,6 +461,9 @@ h1 {
   box-shadow: 5px 5px 10px #D1D1D1;
   border: inherit;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
   transition: all 0.4s ease-in-out;
   opacity: 1;
 }
@@ -395,13 +471,6 @@ h1 {
   transform: scale(1.1);
   box-shadow: 5px 5px 10px #b1b1b1;
   opacity: 0.9;
-}
-.btn__menu a {
-  text-decoration: none;
-  color: white;
-}
-.btn__menu p {
-  font-size: 15px;
 }
 
 body {
@@ -466,9 +535,12 @@ body .reservation__soustitre p {
   color: gray;
   font-size: 19px;
 }
-body .reservation button {
-  padding: 0px 15px;
+body .reservation__btn {
+  padding: 15px;
   border-radius: 25px;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
   cursor: pointer;
   background: linear-gradient(to top, #9356DC, #FF79DA);
   border: inherit;
@@ -476,17 +548,10 @@ body .reservation button {
   transition: all 0.4s ease-in-out;
   opacity: 1;
 }
-body .reservation button:hover {
+body .reservation__btn:hover {
   transform: scale(1.1);
   box-shadow: 5px 5px 10px #b1b1b1;
   opacity: 0.9;
-}
-body .reservation button a {
-  text-decoration: none;
-  color: white;
-}
-body .reservation button p {
-  font-size: 15px;
 }
 body h2 {
   margin: 0;
@@ -518,6 +583,8 @@ body .fonction__btn {
   }
 }
 body .fonction__btn1 {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   border-radius: 20px;
   padding: 10px 0;

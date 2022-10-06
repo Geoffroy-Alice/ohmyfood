@@ -96,15 +96,6 @@ h1{
     }
 }
 .menu__entrees{
-    animation: 4s cubic-bezier(.6,.34,.42,.67) 2.6 1 slideInFromLeft;
-    @keyframes animation-menu{
-        to{
-            transform: translateX(0);
-        }
-        from{
-            transform: translateX(1);
-        }
-    }
     @media screen and (min-width: 901px){
         width: 33%;
     }  
@@ -136,6 +127,54 @@ h1{
     background: #99E2D0;
     margin-top: 5px;
     }
+.card__entrees{
+    animation: animation-entrees 3s ease-in-out;
+    @keyframes animation-entrees {
+        0%{
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        30%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+}
+.card__plats{
+    animation: animation-plats 4s ease-in-out;
+    @keyframes animation-plats {
+        0%{
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        30%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+}
+.card__desserts{
+    animation: animation-desserts 5s ease-in-out;
+    @keyframes animation-desserts {
+        0%{
+            opacity: 0;
+             transform: translateY(100%);
+        }
+        30%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+}
 .card{
     margin-bottom: 15px;
     margin-left: 15px;
@@ -164,7 +203,7 @@ h1{
             }
             .fa-solid, .fas{
                 transform: rotate(360deg);
-                transition: all 0.8s ease-in-out;
+                transition: all 1s ease-in-out;
                 color: white;
             }
         }
@@ -241,7 +280,7 @@ h1{
 .btn__menu{
     margin-top: 50px;
     border-radius: 25px;
-    padding: 0px 50px;
+    padding: 15px 50px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -249,18 +288,14 @@ h1{
     box-shadow: 5px 5px 10px #D1D1D1;
     border: inherit;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
     transition: all 0.4s ease-in-out;
     opacity: 1;
     &:hover{
         transform: scale(1.1);
         box-shadow: 5px 5px 10px #b1b1b1;
         opacity: 0.9;
-    }
-    a{
-        text-decoration: none;
-        color: white;
-    }
-    p{
-        font-size: 15px;
     }
 }

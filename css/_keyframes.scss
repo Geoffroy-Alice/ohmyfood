@@ -1,0 +1,61 @@
+@keyframes loader {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    70%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@keyframes loader-animation {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+@keyframes animation-entrees {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes animation-plats {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes animation-desserts {
+    0%{
+        opacity: 0;
+         transform: translateY(100%);
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}

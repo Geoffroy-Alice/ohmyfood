@@ -28,18 +28,18 @@
 }
 @-webkit-keyframes loader-animation {
   from {
-    rotate: 0deg;
+    transform: rotate(0);
   }
   to {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
 }
 @keyframes loader-animation {
   from {
-    rotate: 0deg;
+    transform: rotate(0);
   }
   to {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
 }
 @-webkit-keyframes animation-entrees {
